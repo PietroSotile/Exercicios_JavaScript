@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript</title>
+<meta charset="UTF-8"/>
+</head>
+<body>
+
+<h1>Exercício</h1>
+<h2>Faça uma galeria de imagens Javascript utilizando as imagens disponíveis</h2>
+<div style="margin-left: auto; margin-right: auto; width: 100%;display: flex; justify-content: center;">
+    <img style="cursor: pointer" id="pinguim" src="img/1p_pb.jpg" alt="pinguim"
+    onmouseover="corImagem('pinguim','img/1p.jpg')" 
+    onmouseout="pbImagem('pinguim','img/1p_pb.jpg')"
+    onclick="aumentarImagem('img/1.jpg')">
+    <img style="cursor: pointer" id="panda" src="img/2p_pb.jpg" alt="panda" 
+    onmouseover="corImagem('panda','img/2p.jpg')"
+    onmouseout="pbImagem('panda','img/2p_pb.jpg')"
+     onclick="aumentarImagem('img/2.jpg')">
+    <img style="cursor: pointer" id="porco" src="img/3p_pb.jpg" alt="porco" 
+    onmouseover="corImagem('porco','img/3p.jpg')"
+    onmouseout="pbImagem('porco','img/3p_pb.jpg')" 
+    onclick="aumentarImagem('img/3.jpg')">
+    <img style="cursor: pointer" id="passaro" src="img/4p_pb.jpg" alt="passaro" 
+    onmouseover="corImagem('passaro', 'img/4p.jpg')"
+    onmouseout="pbImagem('passaro', 'img/4p_pb.jpg')" 
+    onclick="aumentarImagem('img/4.jpg')">
+    <img style="cursor: pointer" id="coelho" src="img/5p_pb.jpg" alt="coelho" 
+    onmouseover="corImagem('coelho','img/5p.jpg')"
+    onmouseout="pbImagem('coelho','img/5p_pb.jpg')"
+    onclick="aumentarImagem('img/5.jpg')">
+    <img style="cursor: pointer" id="panda_vermelho" src="img/6p_pb.jpg" alt="panda_vermelho"
+    onmouseover="corImagem('panda_vermelho', 'img/6p.jpg')" 
+    onmouseout="pbImagem('panda_vermelho', 'img/6p_pb.jpg')" 
+    onclick="aumentarImagem('img/6.jpg')">
+    <img style="cursor: pointer" id="cachorro_enrolado" src="img/7p_pb.jpg" alt="cachorro_enrolado" 
+    onmouseover="corImagem('cachorro_enrolado', 'img/7p.jpg')" 
+    onmouseout="pbImagem('cachorro_enrolado','img/7p_pb.jpg')" 
+    onclick="aumentarImagem('img/7.jpg')">
+    <img style="cursor: pointer" id="cachorro_liso" src="img/8p_pb.jpg" alt="cachorro_liso" 
+    onmouseover="corImagem('cachorro_liso','img/8p.jpg')" 
+    onmouseout="pbImagem('cachorro_liso','img/8p_pb.jpg')" 
+    onclick="aumentarImagem('img/8.jpg')">
+    <img style="cursor: pointer" id="tigre" src="img/9p_pb.jpg" alt="tigre" 
+    onmouseover="corImagem('tigre','img/9p.jpg')"
+    onmouseout="pbImagem('tigre','img/9p_pb.jpg')" 
+    onclick="aumentarImagem('img/9.jpg')">
+</div>
+<div style="margin-left: auto; margin-right: auto; width: 100%;display: flex;justify-content: center;">
+    <img id="grande" src="" alt="imgGrande">
+</div>
+<script>
+    var grande= document.getElementById("grande");
+    grande.style.visibility="hidden";
+    var grande= document.getElementById("grande");
+    function corImagem(a,b){
+        document.getElementById(a).src=b;
+    }
+    function pbImagem(a,b){
+        document.getElementById(a).src=b;
+    }
+    function aumentarImagem(a){
+        grande.src=a
+        grande.style.visibility="visible";
+    }
+</script>
+</body>
+</html>

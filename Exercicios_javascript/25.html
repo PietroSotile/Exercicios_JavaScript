@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<meta charset="UTF-8"/>
+</head>
+
+<body>
+
+<script>
+/* Dica de conversão:
+	Celsius = (Fahrenheit - 32)/1.8;
+	Fahrenheit = (Celsius * 1.8) + 32;
+*/
+function trocaTempC(){
+	var fahrenheit_C= (document.getElementById("tempF").value - 32)/1.8;;
+	document.getElementById("tempC").value = fahrenheit_C;
+}
+function trocaTempF(){
+	var celsius_F= (document.getElementById("tempC").value * 1.8) + 32
+	document.getElementById("tempF").value = celsius_F;
+}
+</script>
+
+<h1>Exercício:</h1>
+<h2>Faça um conversor de temperaturas; ao digitar em um campo, atualiza o outro com a temperatura convertida.</h2>
+
+<h3>Conversor de temperaturas</h3>
+<label>Temperatura em Cº</label>
+<input type="text" name="nome" id="tempC" onKeyUp="trocaTempF()"/>
+<br/><br/>
+<label>Temperatura em Fº</label>
+<input type="text" name="nome" id="tempF" onKeyUp="trocaTempC()"/>
+
+</body>
+</html>

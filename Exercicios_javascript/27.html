@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<meta charset="UTF-8"/>
+</head>
+
+<body>
+
+<h1>Exercício:</h1>
+<h2>Crie um objeto de data e depois mostre a data no formato brasileiro e no formato internacional nos 
+	locais indicados</h2>
+
+<p id="dataBR">Exiba o resultado aqui!</p>
+<p id="dataMySQL">Exiba o resultado aqui!</p>
+
+<script>
+	var hoje = new Date;
+	var dia = hoje.getDate();
+	var mes = hoje.getMonth()+1;
+	var ano = hoje.getFullYear();
+	var horas = hoje.getHours();
+	var minutos = hoje.getMinutes();
+	var segundos = hoje.getSeconds();
+
+	var data = {
+		data_ISO    : ano+"-"+ mes+"-"+dia+"  "+horas+":"+minutos+":"+segundos,
+		data_Brasil : dia+"/"+mes+"/"+ano+"  "+horas+":"+minutos+":"+segundos
+	}
+
+	document.getElementById("dataMySQL").innerHTML = "Formato Internacional:  "+data.data_ISO;
+	document.getElementById("dataBR").innerHTML = "Formato Brasileiro:  "+data.data_Brasil;
+/* 
+getFullYear()	Returns the year (four digits)
+getMonth()	Returns the month (from 0-11)
+getDate()	Returns the day of the month (from 1-31)
+
+getHours()	Returns the hour (from 0-23)
+getMinutes()	Returns the minutes (from 0-59)
+getSeconds()	Returns the seconds (from 0-59)
+*/
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<meta charset="UTF-8"/>
+</head>
+
+<body>
+
+<h1>Exercício:</h1>
+<h2>Crie um objeto de data e depois mostre a data e a hora atual no local indicado.</h2>
+
+<p id="demo">Exiba o resultado aqui!</p>
+
+<script>
+	var hoje = new Date();
+	var dia = hoje.getDate();
+	var mes = (hoje.getMonth() + 1);
+	var ano = hoje.getFullYear();
+	var horas = hoje.getHours();
+	var minutos = hoje.getMinutes();
+	var data = {
+    	data_atual	: dia + "/" + mes + " de " + ano,
+    	hora_atual  : horas + "h" + minutos + "min."
+	};
+	document.getElementById("demo").innerHTML = "Hoje é dia " + data.data_atual 
+	+ "."+ "  Agora são "+ data.hora_atual +"."
+</script>
+
+</body>
+</html>
